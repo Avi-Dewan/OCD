@@ -196,6 +196,12 @@ def train(projection_head, model, train_loader, test_loader, unlabelled_train_lo
 
         print('Train Accuracies: All {:.4f} | Old {:.4f} | New {:.4f}'.format(all_acc, old_acc,
                                                                               new_acc))
+        
+        with torch.no_grad():
+            all_acc_test, old_acc_test, new_acc_test = test_on_the_fly(model, projection_head, test_loader,
+                                                    epoch=epoch, save_name='Test ACC',
+                                                    args=args)
+            
         print('Test Accuracies: All {:.4f} | Old {:.4f} | New {:.4f}'.format(all_acc_test, old_acc_test,
                                                                                 new_acc_test))
 
