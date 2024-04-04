@@ -312,7 +312,7 @@ if __name__ == "__main__":
     parser.add_argument('--gamma', type=float, default=0.1)
     parser.add_argument('--momentum', type=float, default=0.9)
     parser.add_argument('--weight_decay', type=float, default=1e-4)
-    parser.add_argument('--epochs', default=2, type=int) #20 
+    parser.add_argument('--epochs', default=20, type=int) #20 
     parser.add_argument('--exp_root', type=str, default=exp_root)
     parser.add_argument('--transform', type=str, default='imagenet')
     parser.add_argument('--seed', default=1, type=int)
@@ -326,7 +326,7 @@ if __name__ == "__main__":
         # ----------------------
         # Multiple Runs
         # ----------------------
-    for run in range(0, 1): #10
+    for run in range(0, 10): #10
 
         # ----------------------
         # INIT
